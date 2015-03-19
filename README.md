@@ -32,3 +32,12 @@ The orderer currently assumes that module files should appear last, as the modul
        .directive('clock', clockDirective);
   ``` 
 
+## Usage
+
+In the <code>BundleConfig.cs</code> file, you can use the helper extension method, <code>.AddAngularApp</code>.
+
+```
+bundles.AddAngularApp("~/bundles/app", "~/Scripts/App");
+```
+
+The first parameter is the virtual name of the bundle, the second parameter is the Directory containing the application angular files.
