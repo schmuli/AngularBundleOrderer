@@ -84,11 +84,11 @@ namespace Optimization.Orderers
 
         private enum FileType
         {
+            Other,
             Service,
             Controller,
             Directive,
-            Module,
-            Other
+            Module
         }
 
         private class FileStats
