@@ -73,6 +73,11 @@ namespace Optimization.Orderers
                 return FileType.Module;
             }
 
+            if (name.IndexOf('.') == -1)
+            {
+                return FileType.Other;
+            }
+
             var type = Path.GetExtension(name).Substring(1);
             FileType parsedType;
             if (Enum.TryParse(type, true, out parsedType))
@@ -88,6 +93,7 @@ namespace Optimization.Orderers
             Service,
             Controller,
             Directive,
+            Filter,
             Module
         }
 
